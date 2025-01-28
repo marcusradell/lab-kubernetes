@@ -1,0 +1,20 @@
+# lab-kubernetes
+
+Create a repo with three subfolders: /frontend, /backend, and /infrastructure.
+
+## /frontend
+
+Setup a vite project with react-ts as template.
+
+## /backend
+
+Setup a backend with a dockerfile that works for you locally via docker run.
+
+## /infrastructure
+
+### tools
+
+- kubectl
+- kustomize
+- k9s
+- minikube

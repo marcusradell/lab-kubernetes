@@ -1,5 +1,5 @@
 {
-  "name": "backend",
+  "name": "jork-api",
   "scripts": {
     "dev": "bun run --hot src/index.ts"
   },
