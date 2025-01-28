@@ -24,6 +24,7 @@ Setup a backend with a dockerfile that works for you locally via docker run.
 #### Tutorials
 
 https://kubernetes.io/docs/tutorials/hello-minikube/https://kubernetes.io/docs/tutorials/hello-minikube/
+https://kubernetes.io/docs/tasks/run-application/
 
 #### Main commands
 
