@@ -18,3 +18,7 @@ Setup a backend with a dockerfile that works for you locally via docker run.
 - kustomize
 - k9s
 - minikube
+
+### Port Forwarding
+
+Can be done with `k9s` or `kubectl port-forward service/jork-api 3000:3000`.
