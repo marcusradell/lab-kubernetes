@@ -13,7 +13,7 @@ spec:
         app: jork-api
     spec:
       containers:
-        - name: jork-api-container
-          image: marcusradell/jork-api:latest
+        - name: jork-api
+          image: marcusradell/jork-api
           ports:
             - containerPort: 3000
