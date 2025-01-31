@@ -7,4 +7,4 @@ resources:
 
 images:
   - name: marcusradell/jork-api
-    newTag: 0.0.1
+    newTag: 66c2dfb46c00571738a6ea98ca994ff0a67cb72e
