@@ -1,12 +1,25 @@
 use axum::{routing::get, Router};
+mod db;
 
 #[tokio::main]
 async fn main() {
-    // build our application with a single route
-    let app = Router::new().route("/", get(|| async { "Hello, World!" }));
+    dotenvy::dotenv().expect("Failed to load .env file");
 
-    // run our app with hyper, listening globally on port 3000
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-    println!("Starting server.");
-    axum::serve(listener, app).await.unwrap();
+    let pool = db::create_pool()
+        .await
+        .expect("Failed to create database connection pool");
+
+    let app = Router::new()
+        .route("/", get(|| async { "Hello, World!" }))
+        .with_state(pool);
+
+    let addr = "0.0.0.0:3000";
+    println!("Starting server on {}", addr);
+    let listener = tokio::net::TcpListener::bind(addr)
+        .await
+        .expect("Failed to bind to address");
+
+    axum::serve(listener, app)
+        .await
+        .expect("Failed to start server");
 }
